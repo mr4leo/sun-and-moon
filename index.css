@@ -9,6 +9,7 @@
 
     .content {
       display: flex;
+    justify-content: center;
       transition: all 3s ease;
     }
 
