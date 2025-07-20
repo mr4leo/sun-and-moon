@@ -1,0 +1,153 @@
+* {margin:0;
+    padding: 0;
+    box-sizing: border-box;
+    }
+    
+    body {
+      background-color: black;
+    }
+    
+    h1 {
+        position: absolute;
+        z-index: 2;
+        top: 55%;
+        font-family: Orbitron, Helvetica, sans-serif;
+        font-size: 4rem;
+        font-weight: bolder;
+        letter-spacing: .8rem;
+        color: rgb(0, 255, 132);
+        text-shadow: 0 2rem 2rem rgba(0, 0, 0, 0.5);
+    }
+
+    .space {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: #574172;
+      height: 100vh;
+      width: 100vw;
+      /* gap: 5rem; */
+    }
+    
+    .moon-path {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      /* background-color: #152238; */
+      height: 100%;
+    }
+
+    .moon-revolve {
+        position: relative;
+        /* z-index: 3; */
+        left: 5rem;
+        transform-origin: -600% 100%;
+        animation: moon-revolve 5s linear infinite;
+      }
+      
+      .moon{
+        background-color: white;
+        box-shadow: 0 0rem 3rem rgba(255,255,255, 0.9);
+        height: 2rem;
+        width: 2rem;
+        border-radius: 40%;
+        /* left: 5rem; */
+        animation: moon 5s linear infinite;
+      }
+    
+      
+
+
+    /* SUN */
+    .sun {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: orange;
+      height: 10rem;
+      width: 10rem;
+      border-radius: 100%;
+      box-shadow: 0 8rem 5rem rgba(0, 0, 0, 0.6);
+      animation: levitate 5s linear infinite;
+    }
+    
+    .sun img {
+      position: absolute;
+      height: 14rem;
+      width: 14rem;
+    }
+    
+    #sunface {
+      position: relative;
+      transform: scale(1.1);
+      z-index: 1;
+    }
+    
+    #sunrays {
+      margin-left: -10px;
+      animation: sun-spin 5s linear infinite;
+    }
+    
+
+
+    /* ANIMATION */
+    @keyframes sun-spin {
+      0%{
+        transform: rotate(0deg) scale(1);
+      }
+      50%{
+        transform: rotate(-180deg) scale(1.5);
+      }
+      100%{
+        transform: rotate(-360deg) scale(1);
+      }
+    }
+    
+    @keyframes moon-revolve {
+      0%{
+        transform: rotate(0deg);
+      }
+      100%{
+        transform: rotate(360deg);
+      }
+    }
+    
+    @keyframes moon {
+      0%{
+        transform: rotate(0deg) scale(.8);
+      }
+      25% {
+        transform: rotate(180deg) scale(1.25);
+      }
+      50% {
+        transform: rotate(360deg) scale(.8);
+      }
+      75% {
+        transform: rotate(540deg) scale(1.25);
+      }
+      100%{
+        transform: rotate(720deg) scale(.8);
+        }
+    }
+
+    @keyframes levitate {
+        0%{
+            transform: translateY(0px);
+        }
+
+        25%{
+            transform: translateY(25px);
+        }
+
+        50%{
+            transform: translateY(0px);
+        }
+
+        75%{
+            transform: translateY(-25px);
+        }
+
+        100%{
+            transform: translateY(0px);
+        }
+    }
