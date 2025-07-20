@@ -6,17 +6,28 @@
     body {
       background-color: black;
     }
+
+    .content {
+      display: flex;
+      transition: all 3s ease;
+    }
+
+    .content-animated{
+      animation: fade-in 3s ease 1;
+    }
     
     h1 {
-        position: absolute;
+        position: relative;
         z-index: 2;
-        top: 55%;
+        top: 6rem;
+        left: 50%;
         font-family: Orbitron, Helvetica, sans-serif;
         font-size: 4rem;
         font-weight: bolder;
         letter-spacing: .8rem;
         color: rgb(0, 255, 132);
         text-shadow: 0 2rem 2rem rgba(0, 0, 0, 0.5);
+        /* transition: all 3s ease; */
     }
 
     .space {
@@ -46,6 +57,8 @@
       }
       
       .moon{
+        position: relative;
+        z-index: 1;
         background-color: white;
         box-shadow: 0 0rem 3rem rgba(255,255,255, 0.9);
         height: 2rem;
@@ -53,9 +66,7 @@
         border-radius: 40%;
         /* left: 5rem; */
         animation: moon 5s linear infinite;
-      }
-    
-      
+      }      
 
 
     /* SUN */
@@ -150,4 +161,15 @@
         100%{
             transform: translateY(0px);
         }
+    }
+
+    @keyframes fade-in {
+      0%{
+        opacity: 0;
+        transform: translateY(5rem);
+      }
+      100%{
+        opacity: 100;
+        transform: translateY(0);
+      }
     }
