@@ -9,7 +9,7 @@
 
     .content {
       display: flex;
-    justify-content: center;
+      justify-content: center;
       transition: all 3s ease;
     }
 
@@ -20,15 +20,14 @@
     h1 {
         position: relative;
         z-index: 2;
-        top: 6rem;
-        left: 50%;
+        top: 14rem;
         font-family: Orbitron, Helvetica, sans-serif;
         font-size: 4rem;
         font-weight: bolder;
         letter-spacing: .8rem;
         color: rgb(0, 255, 132);
         text-shadow: 0 2rem 2rem rgba(0, 0, 0, 0.5);
-        /* transition: all 3s ease; */
+        width: 100%
     }
 
     .space {
@@ -43,6 +42,7 @@
     
     .moon-path {
       display: flex;
+      flex-direction: column;
       justify-content: center;
       align-items: center;
       /* background-color: #152238; */
@@ -51,9 +51,9 @@
 
     .moon-revolve {
         position: relative;
-        /* z-index: 3; */
-        left: 5rem;
-        transform-origin: -600% 100%;
+        top: -5rem;
+        left: -13rem;
+        transform-origin: 700% 100%;
         animation: moon-revolve 5s linear infinite;
       }
       
